@@ -16,13 +16,13 @@ class LoginView extends GetView<LoginController> {
           return Column(
             children: [
               TextField(
+                controller: controller.emailC,
                 decoration: const InputDecoration(labelText: 'Email'),
-                onChanged: (value) => controller.email.value = value,
               ),
               TextField(
+                controller: controller.passC,
                 decoration: const InputDecoration(labelText: 'Password'),
                 obscureText: true,
-                onChanged: (value) => controller.password.value = value,
               ),
               const SizedBox(height: 20),
               if (controller.isLoading.value)
